@@ -7,6 +7,7 @@ aws ec2 run-instances \
      --security-group-ids sg-0d7983acd4ff49f27  \
      --block-device-mappings DeviceName=/dev/sda1,Ebs={VolumeSize=50} \
      --user-data file://install_worker.sh \
+     --count 2 \
      --profile siprod \
      --region us-west-2
 
